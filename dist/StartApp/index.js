@@ -14,7 +14,6 @@ class StartApp extends Descriptor_1.default {
         return {
             name: "StartApp",
             inputs: null,
-            children: []
         };
     }
 }

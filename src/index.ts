@@ -7,7 +7,7 @@ class Root extends Descriptor {
     }
 }
 
-const root = Descriptor.createNode(NodeApp);
+const root = Descriptor.createNode(null, NodeApp);
 console.log(root);
 
 export default root;

@@ -1,8 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Applet {
+    __type = "__root";
+    entry;
+    nodes;
+    views;
+    outputs;
     constructor() {
-        this.__type = "__root";
         this.entry = null;
         this.nodes = null;
         this.views = null;

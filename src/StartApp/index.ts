@@ -16,7 +16,6 @@ class StartApp extends Descriptor<Props>{
         return {
             name: "StartApp",
             inputs: null,
-            children: []
         }
     }
 }

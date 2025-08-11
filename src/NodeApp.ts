@@ -1,5 +1,5 @@
 import express, {Express} from "express";
-import Descriptor  from "./core/classes/Descriptor";
+import Descriptor, { Return }  from "./core/classes/Descriptor";
 import StartApp from "./StartApp";
 
 class NodeApp extends Descriptor{
@@ -7,13 +7,10 @@ class NodeApp extends Descriptor{
     code(){
         this.app = express();
     }
-    
+
+    @Return()
     render(){
-        return {
-            name: "NodeApp",
-            inputs: null,
-            children: [Descriptor.createNode(StartApp, {app: this.app})] 
-        }
+        return Descriptor.createNode(null, StartApp, StartApp);
     }
 }
 

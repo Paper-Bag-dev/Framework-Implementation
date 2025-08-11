@@ -10,6 +10,6 @@ class Root extends Descriptor_1.default {
         return Descriptor_1.default.createNode(NodeApp_1.default);
     }
 }
-const root = Descriptor_1.default.createNode(NodeApp_1.default);
+const root = Descriptor_1.default.createNode(null, NodeApp_1.default);
 console.log(root);
 exports.default = root;
