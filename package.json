@@ -1,0 +1,17 @@
+{
+  "name": "@paraflux/express-node-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0"
+  }
+}
