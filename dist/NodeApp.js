@@ -38,17 +38,11 @@ const StartApp_1 = __importDefault(require("./StartApp"));
 class NodeApp extends Descriptor_1.default {
     app = null;
     code() {
-        this.app = (0, express_1.default)();
+        const app = (0, express_1.default)();
+        return { app };
     }
-    // render(){
-    //     return {
-    //         name: "NodeApp",
-    //         inputs: null,
-    //         children: [Descriptor.createNode(StartApp, {app: this.app})] 
-    //     }
-    // }
     render() {
-        return Descriptor_1.default.createNode(null, StartApp_1.default, StartApp_1.default);
+        return Descriptor_1.default.createNode({ app: this.app }, StartApp_1.default, StartApp_1.default);
     }
 }
 __decorate([

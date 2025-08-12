@@ -6,8 +6,11 @@ interface Props {
 }
 
 class StartApp extends Descriptor<Props>{
-    code(){
-        this.props.app.listen(3000, () => {
+    constructor(props: Props){
+        super(props);
+    }
+    code(context: { app: Express }){
+        context.app.listen(3000, () => {
             console.log("Server is running on port 3000");
         });
     }

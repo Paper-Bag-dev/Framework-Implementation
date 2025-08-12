@@ -41,15 +41,10 @@ export class Descriptor<Props = {}> {
     this.props = props;
   }
 
-  code() {
+  code(context?: any):any {
     throw new Error("Method 'code' must be implemented.");
   }
 
-  // static createNode(Component: typeof Descriptor, props: any = null, ...children: Descriptor[] ): vNode {
-  //   const instance = new Component(props);
-  //   instance.children = children;
-  //   return instance.render();
-  // }
   
   static createNode(props: any = null, ...children: Array<new (props: any) => Descriptor<any>>){
     const initInstances = children.map((childClass, ind) => {

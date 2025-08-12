@@ -5,12 +5,13 @@ import StartApp from "./StartApp";
 class NodeApp extends Descriptor{
     app: Express | null = null;
     code(){
-        this.app = express();
+        const app = express();
+        return {app};
     }
 
     @Return()
     render(){
-        return Descriptor.createNode(null, StartApp, StartApp);
+        return Descriptor.createNode({app: this.app}, StartApp);
     }
 }
 

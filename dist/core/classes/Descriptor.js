@@ -22,14 +22,9 @@ class Descriptor {
     constructor(props) {
         this.props = props;
     }
-    code() {
+    code(context) {
         throw new Error("Method 'code' must be implemented.");
     }
-    // static createNode(Component: typeof Descriptor, props: any = null, ...children: Descriptor[] ): vNode {
-    //   const instance = new Component(props);
-    //   instance.children = children;
-    //   return instance.render();
-    // }
     static createNode(props = null, ...children) {
         const initInstances = children.map((childClass, ind) => {
             const childInstance = new childClass(props);

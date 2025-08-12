@@ -5,8 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Descriptor_1 = __importDefault(require("../core/classes/Descriptor"));
 class StartApp extends Descriptor_1.default {
-    code() {
-        this.props.app.listen(3000, () => {
+    constructor(props) {
+        super(props);
+    }
+    code(context) {
+        context.app.listen(3000, () => {
             console.log("Server is running on port 3000");
         });
     }
